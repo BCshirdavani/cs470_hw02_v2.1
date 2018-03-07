@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+
     tools:context="com.example.shymacbook.picturematch.game"
     android:orientation="vertical">
 
@@ -36,85 +37,73 @@
     </LinearLayout>
 
 
-    <GridLayout
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/linearLayout"
-        android:layout_marginTop="36dp"
-        android:background="#000000"
-        android:columnCount="3"
-        android:padding="2dp"
-        android:rowCount="2"
-        >
+        android:layout_height="match_parent">
 
-        <ImageView
-            android:layout_columnWeight="1"
-            android:layout_margin="8dp"
-            android:layout_rowWeight="1"
-            android:background="@color/colorAccent"
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#000000"
+            android:columnCount="2"
             android:padding="2dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/bulb"
-            android:visibility="visible" />
+            android:rowCount="3">
 
-        <ImageView
-            android:layout_columnWeight="1"
-            android:layout_margin="8dp"
-            android:layout_rowWeight="1"
-            android:background="@color/colorPrimary"
-            android:padding="2dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/bulb"
-            android:visibility="visible" />
-
-        <ImageView
-            android:layout_columnWeight="1"
-            android:layout_margin="8dp"
-            android:layout_rowWeight="1"
-            android:background="@color/colorPrimary"
-            android:padding="2dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/bulb"
-            android:visibility="visible" />
-
-        <ImageView
-            android:layout_columnWeight="1"
-            android:layout_margin="8dp"
-            android:layout_rowWeight="1"
-            android:background="@color/colorPrimary"
-            android:padding="2dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/bulb"
-            android:visibility="visible" />
-
-        <ImageView
-            android:layout_columnWeight="1"
-            android:layout_margin="8dp"
-            android:layout_rowWeight="1"
-            android:background="@color/colorPrimary"
-            android:padding="2dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/bulb"
-            android:visibility="visible" />
-
-        <ImageView
-            android:layout_columnWeight="1"
-            android:layout_margin="8dp"
-            android:layout_rowWeight="1"
-            android:background="@color/colorPrimary"
-            android:padding="2dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/bulb"
-            android:visibility="visible" />
-
-
-    </GridLayout>
+            <ImageView
+                android:layout_margin="8dp"
+                android:background="@color/colorAccent"
+                android:padding="8dp"
+                android:scaleType="centerCrop"
+                android:visibility="visible"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"/>
+            <ImageView
+                android:layout_margin="8dp"
+                android:background="@color/colorAccent"
+                android:padding="8dp"
+                android:scaleType="centerCrop"
+                android:visibility="visible"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"/>
+            <ImageView
+                android:layout_margin="8dp"
+                android:background="@color/colorAccent"
+                android:padding="8dp"
+                android:scaleType="centerCrop"
+                android:visibility="visible"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"/>
+            <ImageView
+                android:layout_margin="8dp"
+                android:background="@color/colorAccent"
+                android:padding="8dp"
+                android:scaleType="centerCrop"
+                android:visibility="visible"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"/>
+            <ImageView
+                android:layout_margin="8dp"
+                android:background="@color/colorAccent"
+                android:padding="8dp"
+                android:scaleType="centerCrop"
+                android:visibility="visible"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"/>
+            <ImageView
+                android:layout_margin="8dp"
+                android:background="@color/colorAccent"
+                android:padding="8dp"
+                android:scaleType="centerCrop"
+                android:visibility="visible"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"/>
 
 
 
 
+        </GridLayout>
 
+    </LinearLayout>
 
 </android.widget.LinearLayout>

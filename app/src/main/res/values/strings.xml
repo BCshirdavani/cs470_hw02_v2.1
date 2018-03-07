@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">pictureMatch</string>
+    <color name="white">#FFFFFF</color>
+    <color name="yellow">#FFFF00</color>
+    <color name="red">#FF0000</color>
+    <color name="blue">#00BFFF</color>
 </resources>

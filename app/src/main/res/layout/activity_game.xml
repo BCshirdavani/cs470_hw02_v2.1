@@ -65,7 +65,8 @@
                 android:scaleType="centerCrop"
                 android:visibility="visible"
                 android:layout_rowWeight="1"
-                android:layout_columnWeight="1"/>
+                android:layout_columnWeight="1"
+                android:onClick="flip"/>
             <ImageView
                 android:id="@+id/r1c2"
                 android:layout_margin="8dp"
@@ -74,7 +75,8 @@
                 android:scaleType="centerCrop"
                 android:visibility="visible"
                 android:layout_rowWeight="1"
-                android:layout_columnWeight="1"/>
+                android:layout_columnWeight="1"
+                android:onClick="flip"/>
             <ImageView
                 android:id="@+id/r2c1"
                 android:layout_margin="8dp"
@@ -83,7 +85,8 @@
                 android:scaleType="centerCrop"
                 android:visibility="visible"
                 android:layout_rowWeight="1"
-                android:layout_columnWeight="1"/>
+                android:layout_columnWeight="1"
+                android:onClick="flip"/>
             <ImageView
                 android:id="@+id/r2c2"
                 android:layout_margin="8dp"
@@ -92,7 +95,8 @@
                 android:scaleType="centerCrop"
                 android:visibility="visible"
                 android:layout_rowWeight="1"
-                android:layout_columnWeight="1"/>
+                android:layout_columnWeight="1"
+                android:onClick="flip"/>
             <ImageView
                 android:id="@+id/r3c1"
                 android:layout_margin="8dp"
@@ -101,7 +105,8 @@
                 android:scaleType="centerCrop"
                 android:visibility="visible"
                 android:layout_rowWeight="1"
-                android:layout_columnWeight="1"/>
+                android:layout_columnWeight="1"
+                android:onClick="flip"/>
             <ImageView
                 android:id="@+id/r3c2"
                 android:layout_margin="8dp"
@@ -110,10 +115,8 @@
                 android:scaleType="centerCrop"
                 android:visibility="visible"
                 android:layout_rowWeight="1"
-                android:layout_columnWeight="1"/>
-
-
-
+                android:layout_columnWeight="1"
+                android:onClick="flip"/>
 
         </GridLayout>
 

@@ -1,9 +1,11 @@
 package com.example.shymacbook.picturematch;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.provider.ContactsContract;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -17,6 +19,7 @@ public class game extends AppCompatActivity {
     ImageView card_1;
     int card_1_ID;
     ImageView card_2;
+    int card_2_ID;
 
 
     @Override
@@ -38,22 +41,40 @@ public class game extends AppCompatActivity {
         if (clickCount == 1){
             // assign card 1
             card_1_ID = view.getId();
-//            card_1 = (ImageView)findViewById(card_1_ID);
-            card_1 = (ImageView)findViewById(R.id.card_1_ID);
+            card_1 = (ImageView)findViewById(card_1_ID);
+            Log.d("card clicks", "card 1 assigned");
+            Log.d("card clicks", "card click counter: " + clickCount);
             // flip image
+            card_1.setBackgroundResource(R.color.red);
         }
         if (clickCount == 2){
             // do comparison here, now that 2 cards are selected
-
             // assign card 2
-
+            card_2_ID = view.getId();
+            card_2 = (ImageView)findViewById(card_2_ID);
+            Log.d("card clicks", "card 2 assigned");
+            Log.d("card clicks", "card click counter: " + clickCount);
             // flip image
-
+            
             // compare stuff
 
-            // reset click count for the future clicks
+            // if they match, reward! and reset the clicks to 0
+
+        }
+        if (clickCount == 3){
+            Log.d("card clicks", "card click counter: " + clickCount);
+            // not a match, reset the cards and counter
+
+
+
             clickCount = 0;
+            Log.d("card clicks", "card click counter reset to " + clickCount);
         }
     }
+
+
+
+
+
 
 }

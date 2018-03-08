@@ -58,7 +58,7 @@
             android:rowCount="3">
 
             <ImageView
-                android:id="@+id/r1c1"
+                android:id="@+id/card0"
                 android:layout_margin="8dp"
                 android:background="@color/white"
                 android:padding="8dp"
@@ -66,9 +66,10 @@
                 android:visibility="visible"
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
-                android:onClick="flip"/>
+                android:onClick="flip"
+                />
             <ImageView
-                android:id="@+id/r1c2"
+                android:id="@+id/card1"
                 android:layout_margin="8dp"
                 android:background="@color/white"
                 android:padding="8dp"
@@ -76,9 +77,10 @@
                 android:visibility="visible"
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
-                android:onClick="flip"/>
+                android:onClick="flip"
+                />
             <ImageView
-                android:id="@+id/r2c1"
+                android:id="@+id/card2"
                 android:layout_margin="8dp"
                 android:background="@color/white"
                 android:padding="8dp"
@@ -86,9 +88,10 @@
                 android:visibility="visible"
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
-                android:onClick="flip"/>
+                android:onClick="flip"
+                />
             <ImageView
-                android:id="@+id/r2c2"
+                android:id="@+id/card3"
                 android:layout_margin="8dp"
                 android:background="@color/white"
                 android:padding="8dp"
@@ -96,9 +99,10 @@
                 android:visibility="visible"
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
-                android:onClick="flip"/>
+                android:onClick="flip"
+                />
             <ImageView
-                android:id="@+id/r3c1"
+                android:id="@+id/card4"
                 android:layout_margin="8dp"
                 android:background="@color/white"
                 android:padding="8dp"
@@ -106,9 +110,10 @@
                 android:visibility="visible"
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
-                android:onClick="flip"/>
+                android:onClick="flip"
+                />
             <ImageView
-                android:id="@+id/r3c2"
+                android:id="@+id/card5"
                 android:layout_margin="8dp"
                 android:background="@color/white"
                 android:padding="8dp"
@@ -116,7 +121,8 @@
                 android:visibility="visible"
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
-                android:onClick="flip"/>
+                android:onClick="flip"
+                />
 
         </GridLayout>
 

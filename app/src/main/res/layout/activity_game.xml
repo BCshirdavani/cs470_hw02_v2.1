@@ -67,6 +67,8 @@
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
                 android:onClick="flip"
+                android:alpha="10"
+                android:tag="0"
                 />
             <ImageView
                 android:id="@+id/card1"
@@ -78,6 +80,8 @@
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
                 android:onClick="flip"
+                android:alpha="10"
+                android:tag="1"
                 />
             <ImageView
                 android:id="@+id/card2"
@@ -89,6 +93,8 @@
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
                 android:onClick="flip"
+                android:alpha="10"
+                android:tag="2"
                 />
             <ImageView
                 android:id="@+id/card3"
@@ -100,6 +106,8 @@
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
                 android:onClick="flip"
+                android:alpha="10"
+                android:tag="3"
                 />
             <ImageView
                 android:id="@+id/card4"
@@ -111,6 +119,8 @@
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
                 android:onClick="flip"
+                android:alpha="10"
+                android:tag="4"
                 />
             <ImageView
                 android:id="@+id/card5"
@@ -122,6 +132,8 @@
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
                 android:onClick="flip"
+                android:alpha="10"
+                android:tag="5"
                 />
 
         </GridLayout>

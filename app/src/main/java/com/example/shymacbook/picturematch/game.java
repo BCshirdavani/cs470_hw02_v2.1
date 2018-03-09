@@ -2,6 +2,7 @@ package com.example.shymacbook.picturematch;
 
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.provider.ContactsContract;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -18,6 +19,10 @@ public class game extends AppCompatActivity {
     private int clickCount;
     private ImageView card_first;
     private ImageView card_second;
+    private ColorDrawable drawable_first;
+    private ColorDrawable drawable_second;
+    private Integer card_f_int;
+    private Integer card_s_int;
     private ImageView card_0;
     private ImageView card_1;
     private ImageView card_2;
@@ -31,8 +36,9 @@ public class game extends AppCompatActivity {
     private int card_4_ID;
     private int card_5_ID;
     private Integer[] flipArray = {0,0,0,0,0,0};
-    private String[] colorArray;
+    private Integer[] colorArray;
     private ImageView[] cardArray;
+    private String bg_color;
 
 
     @Override
@@ -50,22 +56,31 @@ public class game extends AppCompatActivity {
 
 
         ImageView[] cardArray = {card_0, card_1,  card_2, card_3, card_4, card_5};
-        String[] colorArray = {"red", "blue", "yellow", "red", "blue", "yellow"};
+        Integer[] colorArray = {R.color.red, R.color.blue, R.color.yellow, R.color.red, R.color.blue, R.color.yellow};
         Integer[] flipArray = {0,0,0,0,0,0};
 
-        cardArray[0].setBackgroundResource(R.color.red);
-        cardArray[1].setBackgroundResource(R.color.blue);
-        cardArray[2].setBackgroundResource(R.color.yellow);
-        cardArray[3].setBackgroundResource(R.color.red);
-        cardArray[4].setBackgroundResource(R.color.blue);
-        cardArray[5].setBackgroundResource(R.color.yellow);
+        for (int i = 0; i < 6 ; i++) {
+            cardArray[i].setBackgroundColor(colorArray[i]);
+        }
 
-        cardArray[0].setVisibility(View.INVISIBLE);
-        cardArray[1].setVisibility(View.INVISIBLE);
-        cardArray[2].setVisibility(View.INVISIBLE);
-        cardArray[3].setVisibility(View.INVISIBLE);
-        cardArray[4].setVisibility(View.INVISIBLE);
-        cardArray[5].setVisibility(View.INVISIBLE);
+        Log.d("game mod", "image view colors set onCreate");
+
+//        cardArray[0].setVisibility(View.INVISIBLE);
+//        cardArray[1].setVisibility(View.INVISIBLE);
+//        cardArray[2].setVisibility(View.INVISIBLE);
+//        cardArray[3].setVisibility(View.INVISIBLE);
+//        cardArray[4].setVisibility(View.INVISIBLE);
+//        cardArray[5].setVisibility(View.INVISIBLE);
+//        Log.d("game mod", "image view visibility changed onCreate");
+
+
+        cardArray[0].setImageAlpha(10);
+        cardArray[1].setImageAlpha(255);
+        cardArray[2].setImageAlpha(10);
+        cardArray[3].setImageAlpha(255);
+        cardArray[4].setImageAlpha(10);
+        cardArray[5].setImageAlpha(255);
+        Log.d("game mod", "image view alpha's changed onCreate");
 
         showName = (TextView) findViewById(R.id.nameSpot);
         Intent intentThatStartedThisActivity = getIntent();
@@ -81,15 +96,19 @@ public class game extends AppCompatActivity {
         if (clickCount == 1){
             card_first = (ImageView)findViewById(view.getId());
             Log.d("card clicks", "card_first assigned");
-//            card_first.setImageAlpha(1);
-            card_first.setVisibility(View.VISIBLE);
+            card_first.setImageAlpha(1);
+            drawable_first = (ColorDrawable) card_first.getBackground();
+            card_f_int = Integer.parseInt(card_first.getTag().toString());      //---------------- integer card ID
+//            card_first.setVisibility(View.VISIBLE);
         }
         if (clickCount == 2){
             card_second = (ImageView)findViewById(view.getId());
+            card_s_int = Integer.parseInt(card_second.getTag().toString());     //---------------- integer card ID
             Log.d("card clicks", "card_second assigned");
-//            card_first.setImageAlpha(1);
-            card_first.setVisibility(View.VISIBLE);
-            if (card_first.getBackground().equals(card_second.getBackground())){
+            card_first.setImageAlpha(1);
+//            card_first.setVisibility(View.VISIBLE);
+            if (card_first.getBackground().equals(card_second.getBackground()) ){
+//            if (card_first.getSolidColor() == card_second.getSolidColor()){
                 clickCount = 0;
                 Log.d("card clicks reset", "card click counter: " + clickCount);
                 Toast.makeText(this, "MATCH!", Toast.LENGTH_SHORT).show();
@@ -98,10 +117,10 @@ public class game extends AppCompatActivity {
                 Toast.makeText(this, "wrong...", Toast.LENGTH_SHORT).show();
                 clickCount = 0;
                 Log.d("card clicks reset", "card click counter: " + clickCount);
-//                card_first.setImageAlpha(0);
-//                card_second.setImageAlpha(0);
-                card_first.setVisibility(View.INVISIBLE);
-                card_second.setVisibility(View.INVISIBLE);
+                card_first.setImageAlpha(10);
+                card_second.setImageAlpha(10);
+//                card_first.setVisibility(View.INVISIBLE);
+//                card_second.setVisibility(View.INVISIBLE);
 
             }
         }
